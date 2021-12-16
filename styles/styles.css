@@ -1,0 +1,252 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    margin: 60px auto 50px auto;
+}
+.description{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    max-width: 1000px;
+    margin: 150px auto 25px auto;
+    
+}
+#navbar{
+    font-size: 30px;
+    padding: 10px;
+}
+.fa-bars{
+    padding: 5px;
+    position: fixed;
+    top: 70px;
+    left: 50px;
+    cursor: pointer;
+}
+.fa-concierge-bell{
+    position: fixed;
+    top: 650px;
+    left: 50px;
+    padding: 5px;
+}
+.fa-concierge-bell:hover{
+    color: rgba(246, 175, 41, 0.931);
+}
+
+.menucard{
+    position: fixed;
+    padding: 2px;
+    top: 360px;
+    left: 1px;
+    transform: rotate(90deg);
+}
+
+.foot{
+    text-align: center;
+    padding: 20px;
+}
+.menu{
+    text-decoration: none;
+    color: rgba(246, 175, 41, 0.931);
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 5% 15% 70%;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+.container1{
+    margin: 35px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+.container3{
+    display: flex;
+    max-width: 1300px;
+    font-size: 16px;
+    margin: 50px auto ;
+    padding: 20px;
+
+}
+li{
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+.visit:hover{
+    color: rgba(246, 175, 41, 0.931);
+}
+input{
+    padding: 10px;
+}
+
+.footer{
+    max-height: 300px;
+}
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.food-item{
+    height: auto;
+    max-width: 35%;
+    padding: 15px;
+}
+.quotes{
+    height: 300px;
+    width: auto;
+}
+
+.food-list{
+    max-width: auto;
+    height: 150px;
+    padding: 5px;
+   
+}
+#photos{
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+#display{
+    background-color: rgb(223, 222, 222);
+    height: auto;
+}
+.wrap{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+h5, h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.quotes{
+    max-width: 50%;
+    height: auto;
+    padding: none;
+}
+.button{
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+.socialapps{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    text-align: center;
+    position: fixed;
+    right: 100px;
+    top: 320px;
+}
+.fa-instagram:hover{
+    color: rgb(192, 7, 161);
+}
+.fa-twitter:hover, .fa-facebook:hover{
+    color: blue;
+}
+.book{
+    position: fixed;
+    top: 70px;
+    right: 50px;    
+}
+.support{
+    border: 3px solid black;
+    font-size: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    opacity: 50%;
+    position: fixed;
+    top: 650px;
+    right: 90px;
+    color: rgba(246, 175, 41, 0.931);
+}
+.support:hover{
+    opacity: 100%;
+}
+.visit{
+    font-size: 1.5rem;
+    
+}
+.social-foot{
+    visibility: hidden;
+}
+
+@media(max-width: 414px){
+    .description{
+        font-size: 30px;
+        margin-top: 75px;
+        margin: 10px;
+    }
+    h1{
+        transform: scale(0.7);
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+    .gallery, .photos{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin: 0;
+    }
+    .food-item, .food-list{
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
+        margin: auto;
+    }
+    #display{
+        margin-top: 200px;
+    }
+    .container{
+        grid-template-columns: auto;
+        grid-template-rows: 3% 27% 70%;
+
+    }
+    .container3{
+        flex-direction: column;
+        
+    }
+    .socialapps{
+        visibility: hidden;
+    }
+    .social-foot{
+        visibility: visible;
+        margin-top: 100px;
+        font-size: 40px;
+        margin: auto;
+        text-align: center;
+    }
+    #navbar, .visit{
+        font-size: 16px;
+        opacity: 70%;
+    }
+    .support{
+        font-size: 20px;
+        right: 60px;
+    }
+}
