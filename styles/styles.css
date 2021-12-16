@@ -249,4 +249,7 @@ h5, h3{
         font-size: 20px;
         right: 60px;
     }
+    li{
+        text-align: center;
+    }
 }
