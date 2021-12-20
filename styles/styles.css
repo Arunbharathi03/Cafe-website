@@ -1,255 +1,396 @@
-*{
+* {
     margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
-ul{
-    margin-bottom: 5px;
-    padding: 5px;
+body {
+    font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
 }
-a{
+a {
     text-decoration: none;
     color: black;
-    padding: 10px;
 }
-h1{
-    font-size: 30px;
-    text-align: center;
-    font-weight: 700;
-    margin: 60px auto 50px auto;
-}
-.description{
-    text-align: center;
-    font-size: 60px;
-    font-family: 'Dancing Script', cursive;
-    max-width: 1000px;
-    margin: 150px auto 25px auto;
-    
-}
-#navbar{
-    font-size: 30px;
-    padding: 10px;
-}
-.fa-bars{
-    padding: 5px;
+
+/* Arun Revised styling */
+
+/* navigation */
+
+.i-navigation__menu {
     position: fixed;
-    top: 70px;
-    left: 50px;
+    top: 4.1rem;
+    left: 2rem;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.644);
+    z-index: 1;
 }
-.fa-concierge-bell{
-    position: fixed;
-    top: 650px;
-    left: 50px;
-    padding: 5px;
-}
-.fa-concierge-bell:hover{
-    color: rgba(246, 175, 41, 0.931);
-}
-
-.menucard{
-    position: fixed;
-    padding: 2px;
-    top: 360px;
-    left: 1px;
+.i-food__menu {
     transform: rotate(90deg);
+    font-family: 'Cormorant Garamond', serif;
+    position: fixed;
+    left: -1.5rem;
+    top: 25rem;
+    z-index: 1;
 }
-
-.foot{
-    text-align: center;
-    padding: 20px;
+.i-navigation__home {
+    position: fixed;
+    top: 50rem;
+    left: 2rem;
+    font-size: 2.25rem;
+    z-index: 1;
 }
-.menu{
-    text-decoration: none;
-    color: rgba(246, 175, 41, 0.931);
+.i-navigation__home a {
+    color: rgba(0, 0, 0, 0.644);
 }
-.container{
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 5% 15% 70%;
-    justify-items: center;
-    margin-bottom: 50px;
+.i-book__table {
+    position: fixed;
+    top: 4.1rem;
+    right: 2.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    z-index: 1;
 }
-.container1{
-    margin: 35px 0 15px 0;
+.c-container__social-apps {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 22rem;
+    right: 2.2rem;
+    z-index: 1;
 }
-.container3{
-    display: flex;
-    max-width: 1300px;
-    font-size: 16px;
-    margin: 50px auto ;
-    padding: 20px;
-
+.c-container__social-apps a {
+    padding: 0.6rem;
+    font-size: 1.2rem;
 }
-li{
-    list-style-type: none;
-    line-height: 2rem;
-}
-
-.visit:hover{
-    color: rgba(246, 175, 41, 0.931);
-}
-input{
-    padding: 10px;
-}
-
-.footer{
-    max-height: 300px;
-}
-#gallery{
-    display: flex;
-    flex-wrap: wrap;
-}
-.food-item{
-    height: auto;
-    max-width: 35%;
+.i-support {
+    position: fixed;
+    top: 50rem;
+    right: 2.2rem;
+    font-size: 2rem;
+    border: 0px solid black;
     padding: 15px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1;
 }
-.quotes{
-    height: 300px;
-    width: auto;
-}
-
-.food-list{
-    max-width: auto;
-    height: 150px;
-    padding: 5px;
-   
-}
-#photos{
-    display: flex;
-    flex-wrap: wrap; 
-    max-width: 100%;
-    margin-bottom: 50px;
-}
-#display{
-    background-color: rgb(223, 222, 222);
-    height: auto;
-}
-.wrap{
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-h5, h3{
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.quotes{
-    max-width: 50%;
-    height: auto;
-    padding: none;
-}
-.button{
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-.button:hover{
-    background-color: black;
+.i-support a {
     color: white;
 }
 
-.socialapps{
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
+/* Section - intro-section */
+
+.s-intro-section {
+    margin-bottom: 8rem;
+}
+.c-container {
     text-align: center;
-    position: fixed;
-    right: 100px;
-    top: 320px;
+    margin: auto;
 }
-.fa-instagram:hover{
-    color: rgb(192, 7, 161);
-}
-.fa-twitter:hover, .fa-facebook:hover{
-    color: blue;
-}
-.book{
-    position: fixed;
-    top: 70px;
-    right: 50px;    
-}
-.support{
-    border: 3px solid black;
-    font-size: 40px;
-    padding: 8px;
-    border-radius: 50%;
-    opacity: 50%;
-    position: fixed;
-    top: 650px;
-    right: 90px;
-    color: rgba(246, 175, 41, 0.931);
-}
-.support:hover{
-    opacity: 100%;
-}
-.visit{
+.c-main-title {
+    margin: 4rem auto 8rem auto;
     font-size: 1.5rem;
-    
 }
-.social-foot{
-    visibility: hidden;
+.a-nav__link {
+    transition: all 700ms ease;
+}
+.a-nav__link:hover {
+    color: #ffd252;
+}
+.c-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    max-width: 1000px;
+    text-align: center;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+.a-menu-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #ffd252;
+}
+.c-gallery {
+    max-width: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.c-gallery__img-block {
+    margin: 2rem;
+}
+.c-gallery__img {
+    width: 100%;
+}
+.c-gallery__img-quote { 
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+
+}
+.c-gallery__img-resize {
+    width: 450px;
+    height: 600px;
+    object-fit: contain;
+}
+.c-gallery__img-resize-custom {
+    height: 450px;
+    width: 500px;
+    object-fit: cover;
+    padding-top: 125px;
 }
 
-@media(max-width: 414px){
-    .description{
-        font-size: 30px;
-        margin-top: 75px;
-        margin: 10px;
+/* Section-Follow us */
+
+.s-follow-us {
+    background-color: #f1f1f1;
+    padding: 6rem 0;
+}
+.c-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.c-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    margin-bottom: 6rem;
+}
+.c-img-display {
+    display: flex;
+    max-width: 1800px;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.c-img__block {
+    width: 225px;
+    height: 225px;
+    margin: 0 4px 0 4px;
+    position: relative;
+    transition: 1000ms transform;
+    transform: translateY(0);
+}
+.c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.c-img-overlay {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.575);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
+}
+.overlay-text {
+    color: #f1f1f1d7;
+    margin-top: 1rem;
+}
+.c-img__block:hover .c-img-overlay {
+    display: inline;
+}
+.c-img__block:hover {
+    transform: translateY(-30px);
+    transition-duration: 1s;
+    box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.26);
+}
+.btn-load-more {
+    display: inline-block;
+    font-size: 1rem;
+    font-family: 'Fanwood Text', serif;
+    padding: 0.5rem 2.25rem;
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.btn-load-more:hover {
+    color: #f1f1f1;
+    background-color: black;
+    transition-duration: 800ms;
+}
+
+/* Footer section */
+
+.f-foot-contact {
+    padding-top: 5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+.c-foot-container {
+    display: flex;
+    max-width: 1400px;
+    margin-bottom: 10rem;
+}
+.c-foot-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.c-contact {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+}
+.c-contact li {
+    list-style-type: none;
+}
+.c-contact__custom_li {
+    margin-top: 0.5rem;
+}
+.input-mail {
+    font-size: 1rem;
+    padding: 0.75rem 1.2rem;
+    width: 16rem;
+    height: 2.5rem;
+}
+.input-mail:hover {
+    border: 2px solid black;
+    transform: scale(0.95);
+}
+.btn-subscribe {
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding: 5px;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+.f-copyright {
+    font-size: 1.2rem;
+    color: #979494;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+/* Responsiveness */
+
+@media (max-width: 414px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
     }
-    h1{
-        transform: scale(0.7);
-        margin-bottom: 20px;
-        margin-top: 5px;
+    .c-main-title {
+        font-size: 1rem;
+        margin-bottom: 4rem;
     }
-    .gallery, .photos{
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
+    .c-description {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .c-gallery {
+        justify-content: center;
         margin: 0;
     }
-    .food-item, .food-list{
-        max-width: 100%;
-        height: auto;
-        padding: 15px;
-        margin: auto;
+    .c-gallery__img-block {
+        width: 150px;
+        margin: 1rem;
     }
-    #display{
-        margin-top: 200px;
+    .c-gallery__img {
+        width: 100%;
     }
-    .container{
-        grid-template-columns: auto;
-        grid-template-rows: 3% 27% 70%;
+    .c-gallery__img-resize, .c-gallery__img-resize-custom {
+        height: 180px;
+        padding: 0;
+    }
+    .c-gallery__img-quote {
+        height: 200px ;
+    }
+    
+    /* follow us - section */
 
+    .s-follow-us {
+        padding: 3rem 0;
     }
-    .container3{
+    .c-title {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 2rem;
+    }
+    .c-img__block {
+        width: 100px;
+        height: 60px;
+        margin: 0 2px 0 2px;
+    }
+    .btn-load-more {
+        font-size: 0.5rem;
+        padding: 0.25rem 1.125rem;
+    }
+
+    /* Footer section */
+    
+    .c-foot-container {
+        display: flex;
         flex-direction: column;
-        
+        margin-bottom: 5rem;
     }
-    .socialapps{
-        visibility: hidden;
-    }
-    .social-foot{
-        visibility: visible;
-        margin-top: 100px;
-        font-size: 40px;
-        margin: auto;
+    .f-foot-contact {
+        padding-top: 2.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }  
+    .c-foot-title {
+        font-size: 1rem;
+    } 
+    .c-contact {
+        font-size: 1rem;
+        padding-top: 1rem;
         text-align: center;
     }
-    #navbar, .visit{
-        font-size: 16px;
-        opacity: 70%;
+    .c-contact__custom_li {
+        display: flex;
+        flex-direction: column;
     }
-    .support{
-        font-size: 20px;
-        right: 60px;
+    .input-mail {
+        font-size: 0.8rem;
+    } 
+    .btn-subscribe {
+        margin: 0.8rem auto 0 auto;
+        display: inline-block;
+        font-family: 'Fanwood Text', serif;
+        font-size: 0.7rem;
+        padding: 0.25rem 1.125rem;
+        background-color: #f1f1f1;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid black;
     }
-    li{
-        text-align: center;
+    .f-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation-section */
+
+    .i-navigation {
+        font-size: 0.9rem;
+    }
+    .i-food__menu {
+        padding-bottom: 2.2rem;
+        top: 23rem;
+    }
+    .c-container__social-apps a {
+        font-size: 0.9rem;
+    }
+    .c-container__social-apps {
+        right: 1.2rem;
+    }
+    .i-support {
+        top: 40rem;
+        padding: 0.4rem;
+        font-size: 1.5rem;
+    }
+    .i-navigation__home {
+        top: 40rem;
+        font-size: 1.5rem;
     }
 }
