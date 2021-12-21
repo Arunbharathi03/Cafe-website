@@ -6,37 +6,24 @@ const navBar_close = document.querySelector(".c-navigation-bar__close")
 
 
 navMenu.addEventListener('click', () => {
-    navBar.classList.add('open')
+    navBar.classList.add('s-navigation-bar__open')
 })
 
 navBar_close.addEventListener('click', () => {
-    navBar.classList.remove('open')
+    navBar.classList.remove('s-navigation-bar__open')
 })
 
 
 // Reservation function
 
-const bookTime = document.getElementById('c-reservation-form__time')
+const bookTableMenu = document.querySelector(".c-book-table")
+const reservationBar = document.querySelector(".s-book-reservation")
+const reservationBar_close = document.querySelector(".c-reservation__close")
 
-let timingOptions = [ 6.00, 6.30, 7.00, 7.30, 8.00, 8.30, 9.00, 9.30, 10.00, 10.30, 11.00, 11.30, 12.00, 12.30, 13.00, 13.30, 14.00, 14.30, 15.00, 15.30, 16.00, 16.30, 17.00, 17.30, 18.00, 18.30, 19.00, 19.30, 20.00, 20.30, 21.00, 21.30, 22.00, 22.30, 23.00 ]
-
-const timingOption = timingOptions.map((time) => {
-    return time.toString()
+bookTableMenu.addEventListener('click', () => {
+    reservationBar.classList.add('s-book-reservation__open')
 })
 
-function createBookTimings () {
-    
-    for ( time in timingOption ) {
-        let opt = document.createElement('option')
-
-        if (timingOptions[ time ] < 12 ) opt.textContent = timingOption[ time ] + ' ' + 'A.M'
-
-        else opt.textContent = timingOption[time] + ' ' + 'P.M'
-
-        opt.value = timingOption[ time ] 
-
-        bookTime.appendChild( opt )
-    }
-    
-}
-createBookTimings()
+reservationBar_close.addEventListener('click', () => {
+    reservationBar.classList.remove('s-book-reservation__open')
+})
