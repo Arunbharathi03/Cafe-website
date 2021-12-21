@@ -25,51 +25,73 @@
             </div>
         </section>
 
-        <div class="i-navigation i-navigation__menu">
-            <div class="fas fa-bars fa-lg a-nav__link"></div>
-        </div>
-        <div class="i-navigation i-food__menu">
-            <a class="a-nav__link" href="#">See Our Menu</a>
-        </div>
-        <div class="i-navigation i-navigation__home">
-            <a class="fas fa-pizza-slice a-nav__link" href="index.html"></a>
+        <div id="nav-menu" class="c-menu_bar">
+            <a class="c-menu_bar__icon">
+               <span class="fas fa-bars fa-lg"></span> 
+            </a>
         </div>
 
-        <div class="i-navigation i-book__table">
-            <a class="a-nav__link" href="#">Book a Table</a>
+        <div class="c-food_menu">
+            <a class="c-link_highlight" href="/public/food-menu/index.html">
+                See Our Menu
+            </a>
         </div>
-        <div class="c-container__social-apps">
-            <a class="fab fa-twitter" href="#"></a>
-            <a class="fab fa-instagram" href="#"></a>
-            <a class="fab fa-facebook" href="#"></a>
+
+        <div class="c-scroll_top">
+            <a class="c-scroll_top__highlight" href="index.html">
+                <span class="fas fa-pizza-slice"></span>
+            </a>
         </div>
-        <div class="i-navigation i-support">
+
+        <div class="c-book_table">
+            <a class="c-link_highlight" href="#">
+                Book a Table
+            </a>
+        </div>
+
+        <div class="c-social_apps">
+            <ul class="c-social_apps__list">
+                <li>
+                    <a class="fab fa-twitter" href="#"></a>
+                </li>
+
+                <li>
+                    <a class="fab fa-instagram" href="#"></a>               
+                </li>
+
+                <li>
+                    <a class="fab fa-facebook" href="#"></a>
+                </li>
+            </ul>            
+        </div>
+
+        <div class="c-support">
             <a class="far fa-comment-dots"></a>
         </div>
 
-    <footer class="f-foot-contact">
-        <div class="c-foot-container">
-            <div class="c-foot-title">
-                <a class="a-home a-nav__link" href="#">White & Yellow</a>
+        <footer class="f-foot-contact">
+            <div class="c-foot-container">
+                <div class="c-foot-title">
+                    <a class="a-home a-nav__link" href="#">White & Yellow</a>
+                </div>
+                <ul class="c-contact c-contact__address">
+                    <li>500 Terry Francois Street</li>
+                    <li>San Francisco, CA 94158</li>
+                    <li>Tel: 123-456-7890</li>
+                </ul>
+                <ul class="c-contact c-contact__timing">
+                    <li>Mon - Fri: 7am - 10pm</li>
+                    <li>Saturday: 8am - 11pm</li>
+                    <li>Sunday: 8am - 10pm</li>
+                </ul>
+                <ul class="c-contact c-contact__subscription">
+                    <li>Let's be friends and have eggs benedict</li>
+                    <li class="c-contact__custom_li"><input class="input-mail" type="email" placeholder="Enter your email here*"><button class="btn-subscribe a-nav__link">Subscribe</button></li>
+                </ul>
             </div>
-            <ul class="c-contact c-contact__address">
-                <li>500 Terry Francois Street</li>
-                <li>San Francisco, CA 94158</li>
-                <li>Tel: 123-456-7890</li>
-            </ul>
-            <ul class="c-contact c-contact__timing">
-                <li>Mon - Fri: 7am - 10pm</li>
-                <li>Saturday: 8am - 11pm</li>
-                <li>Sunday: 8am - 10pm</li>
-            </ul>
-            <ul class="c-contact c-contact__subscription">
-                <li>Let's be friends and have eggs benedict</li>
-                <li class="c-contact__custom_li"><input class="input-mail" type="email" placeholder="Enter your email here*"><button class="btn-subscribe a-nav__link">Subscribe</button></li>
-            </ul>
-        </div>
-        <div class="f-copyright">
-            <p>© 2023 by White and Yellow</p>
-        </div>
-    </footer>
+            <div class="f-copyright">
+                <p>© 2023 by White and Yellow</p>
+            </div>
+        </footer>
     </body>
 </html>

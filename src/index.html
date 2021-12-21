@@ -19,12 +19,54 @@
     </head>
 
     <body>
+
+        <section class="s-navigation-bar">
+            <div class="c-navigation-container">
+                <div class="c-navigation-bar__close">
+                    <a class="c-navigation-bar__cancel">
+                        <span class="fas fa-times"></span>
+                    </a>
+                </div> 
+                <ul class="c-navigation-bar__list">
+                    <li class="c-navigation-bar__item">
+                        <a class="c-navigation-bar__link" href="#">Home</a>
+                    </li>
+                    <li class="c-navigation-bar__item">
+                        <a class="c-navigation-bar__link" href="#">Our Story</a>
+                    </li>
+                    <li class="c-navigation-bar__item">
+                        <a class="c-navigation-bar__link" href="#">Menu</a>
+                    </li>
+                    <li class="c-navigation-bar__item">
+                       <a class="c-navigation-bar__link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="s-book-reservation">
+            <div class="c-reservation-container">
+                <form id="c-reservation-form">
+                    <input id="c-reservation-form__date" type="date">
+                    <select id="c-reservation-form__time">
+                        
+                    </select>
+                    <select id="c-reservation-form__size">
+                        <option></option>
+                    </select>
+                </form>
+            </div>
+        </section>
         
         <section class="s-intro-section">
             <div class="c-container">
-                <h1 class="c-main-title"><a class="a-nav__link" href="#">White & Yellow</a></h1>
+                <h1 class="c-main-title">
+                    <a class="c-main-title__link" href="#">
+                        White & Yellow
+                    </a>
+                </h1>
                 <div  class="c-description">
-                    <p>The best place to kick off your day or just take a break and enjoy a <a class="a-menu-link" href="/public/food-menu/index.html">yummy breakfast</a></p>
+                    <p>The best place to kick off your day or just take a break and enjoy a <a class="c-description__link" href="/public/food-menu/index.html">yummy breakfast</a></p>
                 </div>  
                 <div class="c-gallery">
                     <div class="c-gallery__img-block">
@@ -34,69 +76,71 @@
                         <img class="c-gallery__img" src="../src/images/photo-1493770348161-369560ae357d.jpeg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-quote" src="../src/images/438324.jpg">
+                        <img class="c-gallery__img c-gallery__img--quote" src="../src/images/438324.jpg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-resize" src="../src/images/photo-1467003909585-2f8a72700288.jpeg">
+                        <img class="c-gallery__img c-gallery__img--resize" src="../src/images/photo-1467003909585-2f8a72700288.jpeg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-resize" src="../src/images/photo-1484723091739-30a097e8f929.jpeg">
+                        <img class="c-gallery__img c-gallery__img--resize" src="../src/images/photo-1484723091739-30a097e8f929.jpeg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-resize c-gallery__img-resize-custom" src="../src/images/photo-1482049016688-2d3e1b311543.jpeg">
+                        <img class="c-gallery__img c-gallery__img--resize c-gallery__img--resize-custom" src="../src/images/photo-1482049016688-2d3e1b311543.jpeg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-resize c-gallery__img-resize-custom" src="../src/images/photo-1484980972926-edee96e0960d.jpeg">
+                        <img class="c-gallery__img c-gallery__img--resize c-gallery__img--resize-custom" src="../src/images/photo-1484980972926-edee96e0960d.jpeg">
                     </div>
                     <div class="c-gallery__img-block">
-                        <img class="c-gallery__img c-gallery__img-resize" src="../src/images/photo-1497034825429-c343d7c6a68f.jpeg">
+                        <img class="c-gallery__img c-gallery__img--resize" src="../src/images/photo-1497034825429-c343d7c6a68f.jpeg">
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="c-menu_bar">
-            <a class="c-menu_bar__icon">
+        <div id="nav-menu" class="c-menu-bar">
+            <a class="c-menu-bar__icon">
                <span class="fas fa-bars fa-lg"></span> 
             </a>
         </div>
 
-        <div class="c-food_menu">
-            <a class="c-link_highlight" href="/public/food-menu/index.html">
+        <div class="c-food-menu">
+            <a class="c-food-menu__link" href="/public/food-menu/index.html">
                 See Our Menu
             </a>
         </div>
 
-        <div class="c-scroll_top">
-            <a class="c-scroll_top__highlight" href="index.html">
+        <div class="c-scroll-top">
+            <a class="c-scroll-top__link" href="index.html">
                 <span class="fas fa-pizza-slice"></span>
             </a>
         </div>
 
-        <div class="c-book_table">
-            <a class="c-link_highlight" href="#">
+        <div class="c-book-table">
+            <a class="c-book-table__link" href="#">
                 Book a Table
             </a>
         </div>
 
-        <div class="c-social_apps">
-            <ul class="c-social_apps__list">
-                <li>
+        <div class="c-social-apps">
+            <ul class="c-social-apps__list">
+                <li class="c-social-apps__link">
                     <a class="fab fa-twitter" href="#"></a>
                 </li>
 
-                <li>
+                <li class="c-social-apps__link">
                     <a class="fab fa-instagram" href="#"></a>               
                 </li>
 
-                <li>
+                <li class="c-social-apps__link">
                     <a class="fab fa-facebook" href="#"></a>
                 </li>
             </ul>            
         </div>
 
         <div class="c-support">
-            <a class="far fa-comment-dots"></a>
+            <a class="c-support__link">
+                <span class="far fa-comment-dots"></span>
+            </a>
         </div>
 
         <section class="s-follow-us">
@@ -104,51 +148,51 @@
                 <h3 class="c-title">Follow Us</h3>
                 <h1 class="c-subtitle">#white&yellow</h1>
                 <div class="c-img-display">
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1499028344343-cd173ffc68a9.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1499028344343-cd173ffc68a9.jpeg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1529042410759-befb1204b468.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1529042410759-befb1204b468.jpeg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1540189549336-e6e99c3679fe.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1540189549336-e6e99c3679fe.jpeg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/food-related-typographic-quote-with-cupcake-vector-8556498.jpg">
+                        <img class="c-img-display__img" src="../src/images/food-related-typographic-quote-with-cupcake-vector-8556498.jpg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1512621776951-a57141f2eefd.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1512621776951-a57141f2eefd.jpeg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1565958011703-44f9829ba187.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1565958011703-44f9829ba187.jpeg">
                     </div>
-                    <div class="c-img__block">
-                        <div class="c-img-overlay">
-                            <p class="overlay-text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
+                    <div class="c-img-display__block">
+                        <div class="c-img-display__overlay">
+                            <p class="c-img-display__text">@white&yellow: #cafe, #food, #snacks, #love, #cafe.com</p>
                         </div>
-                        <img class="c-img" src="../src/images/photo-1504674900247-0877df9cc836.jpeg">
+                        <img class="c-img-display__img" src="../src/images/photo-1504674900247-0877df9cc836.jpeg">
                     </div>
                 </div>
-                <div class="btn-load">
-                    <button class="btn-load-more">Load More</button>
+                <div class="c-btn-load">
+                    <button class="c-btn-load__button">Load More</button>
                 </div> 
             </div>
         </section>
@@ -156,23 +200,23 @@
         <footer class="f-foot-contact">
             <div class="c-foot-container">
                 <div class="c-foot-title">
-                    <a class="a-home a-nav__link" href="#">White & Yellow</a>
+                    <a class="c-foot-title__link" href="#">White & Yellow</a>
                 </div>
-                <ul class="c-contact c-contact__address">
+                <ul class="c-contact">
                     <li>500 Terry Francois Street</li>
                     <li>San Francisco, CA 94158</li>
                     <li>Tel: 123-456-7890</li>
                 </ul>
-                <ul class="c-contact c-contact__timing">
+                <ul class="c-contact">
                     <li>Mon - Fri: 7am - 10pm</li>
                     <li>Saturday: 8am - 11pm</li>
                     <li>Sunday: 8am - 10pm</li>
                 </ul>
-                <ul class="c-contact c-contact__subscription">
+                <ul class="c-contact">
                     <li>Let's be friends and have eggs benedict</li>
-                    <li class="c-contact__custom_li">
-                        <input class="input-mail" type="email" placeholder="Enter your email here*">
-                        <button class="btn-subscribe a-nav__link">Subscribe</button>
+                    <li class="c-contact__email">
+                        <input class="c-contact__input" type="email" placeholder="Enter your email here*">
+                        <button class="c-contact__button">Subscribe</button>
                     </li>
                 </ul>
             </div>
@@ -180,6 +224,6 @@
                 <p>© 2023 by White and Yellow</p>
             </div>
         </footer>
-        
+        <script src="/js/app.js"></script>
     </body>
 </html>
