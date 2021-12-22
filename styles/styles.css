@@ -69,7 +69,7 @@ li {
     background-color: #ffd252;
     height: 100vh;
     width: 500px;
-    padding: 8rem 0 8rem 0;
+    padding: 8rem 0;
     font-family: 'Cormorant Garamond', serif;
     position: absolute;
     top: 0;
@@ -87,7 +87,6 @@ li {
 .c-reservation {
     display: flex;
     flex-direction: column;
-
 }
 .c-reservation__title {
     margin-bottom: 3rem;
@@ -103,7 +102,7 @@ li {
     max-width: 350px;
     position: relative;
 }
-#c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size, #c-reservation-form__submitBtn {
+#c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
     width: 100%;
     height: 3rem;
     margin-bottom: 1rem;
@@ -118,11 +117,14 @@ li {
     top: 0;
     right: -1rem;
 }
-#c-reservation-form__time {
-    overflow-y: scroll;
-}
 #c-reservation-form__submitBtn {
     font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 10px;
+    border: none;
     font-weight: 700;
     background-color: black;
     color: white;
@@ -147,15 +149,9 @@ li {
     font-size: 1.25rem;
 }
 
+/* book table ends */
 
-
-
-
-
-
-
-
-
+/* Navigation fixed icons */
 
 .c-menu-bar {
     position: fixed;
@@ -202,7 +198,7 @@ li {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    right: 2.2rem;
+    right: 2rem;
     z-index: 1;
 }
 .c-social-apps__link {
@@ -393,9 +389,6 @@ li {
     font-size: 1.15rem;
     line-height: 1.75rem;
 }
-.c-contact li {
-    list-style-type: none;
-}
 .c-contact__email {
     margin-top: 0.5rem;
 }
@@ -431,7 +424,9 @@ li {
 
 /* Responsiveness */
 
-@media (max-width: 414px) {
+/* width 320px - 359px */
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
 
     /* Intro-section */
 
@@ -439,27 +434,33 @@ li {
         margin-bottom: 4rem;
     }
     .c-main-title {
-        font-size: 1rem;
-        margin-bottom: 4rem;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
     }
     .c-description {
-        font-size: 1.5rem;
+        max-width: 240px;
+        font-size: 1.2rem;
         line-height: 2rem;
     }
     .c-gallery {
+        max-width: 280px;
         justify-content: center;
-        margin: 0;
+        margin: auto;
     }
     .c-gallery__img-block {
-        width: 150px;
-        margin: 1rem;
+        width: 100px;
+        margin: 0.5rem 0.5rem ;
     }
     .c-gallery__img {
         width: 100%;
     }
-    .c-gallery__img--resize, .c-gallery__img--resize-custom {
-        height: 180px;
+    .c-gallery__img--resize {
+        height: 160px;
         padding: 0;
+    }
+    .c-gallery__img--resize-custom {
+        height: 130px;
+        padding-top: 2rem;
     }
     .c-gallery__img--quote {
         height: 200px ;
@@ -468,23 +469,28 @@ li {
     /* follow us - section */
 
     .s-follow-us {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     .c-title {
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
     }
     .c-subtitle {
-        font-size: 1.3rem;
-        margin-bottom: 3rem;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
     }
     .c-img-display {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
+        max-width: 240px;
+        flex-wrap: wrap;
     }
     .c-img-display__block {
         width: 100px;
-        height: 60px;
-        margin: 0 2px 0 2px;
+        height: 120px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block--custom {
+        width: 205px;
     }
     .c-img-display__block:hover {
         transform: translateY(-10px);
@@ -510,14 +516,216 @@ li {
     .c-foot-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .f-foot-contact {
+        padding-top: 1.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }  
+    .c-foot-title__link {
+        font-size: 0.7rem;
+    } 
+    .c-contact {
+        font-size: 0.7rem;
+        padding-top: 0.75rem;
+        text-align: center;
+    }
+    .c-contact__email {
+        display: flex;
+        flex-direction: column;
+    }
+    .c-contact__input {
+        font-size: 0.6rem;
+        width: 12rem;
+        height: 2rem;
+        padding: 0.25rem 1rem;
+    } 
+    .c-contact__button {
+        margin: 0.8rem auto 0 auto;
+        display: inline-block;
+        font-family: 'Fanwood Text', serif;
+        font-size: 0.7rem;
+        padding: 0.25rem 1.125rem;
+        background-color: #f1f1f1;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .f-copyright {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Navigation-icons-section */
+
+    .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
+        font-size: 0.85rem;
+    }
+    .c-food-menu {
+        padding-bottom: 3.5rem;
+    }
+    .c-scroll-top__link {
+        font-size: 1.25rem;
+    }
+    .c-support {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 1.5rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.5rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 0.75rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    .c-navigation-container {
+        padding: 0 1rem 0 1rem;
+    }
+
+    /* book table section */
+
+    .s-book-reservation {
+        width: 150px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 115px;
+    }
+    .c-reservation__title {
+        font-size: 1rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.5rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.5rem;
+        font-size: 0.5rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+/* width 360px - 480px */
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
+    }
+    .c-main-title {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+    .c-description {
+        max-width: 270px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .c-gallery {
+        max-width: 320px;
+        justify-content: center;
+        margin: auto;
+    }
+    .c-gallery__img-block {
+        width: 115px;
+        margin: 0.75rem 0.75rem ;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--resize {
+        height: 160px;
+        padding: 0;
+    }
+    .c-gallery__img--resize-custom {
+        height: 130px;
+        padding-top: 2rem;
+    }
+    .c-gallery__img--quote {
+        height: 200px ;
+    }
+    
+    /* follow us - section */
+
+    .s-follow-us {
+        padding: 3rem 0;
+    }
+    .c-title {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 1rem;
+        max-width: 280px;
+        flex-wrap: wrap;
+    }
+    .c-img-display__block {
+        width: 120px;
+        height: 120px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block--custom {
+        width: 245px;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-10px);
+        transition-duration: 1s;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-img-display__overlay {
+        padding: 0.3rem;
+    }
+    .c-img-display__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: 0;
+        padding-top: 0.3rem;
+    }
+    .c-btn-load__button {
+        font-size: 0.5rem;
+        padding: 0.25rem 1.125rem;
+    }
+
+    /* Footer section */
+    
+    .c-foot-container {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 5rem;
     }
     .f-foot-contact {
         padding-top: 2.5rem;
         font-family: 'Cormorant Garamond', serif;
     }  
-    .c-foot-title {
-        font-size: 1rem;
+    .c-foot-title__link {
+        font-size: 0.9rem;
     } 
     .c-contact {
         font-size: 1rem;
@@ -546,13 +754,13 @@ li {
         font-size: 0.8rem;
     }
 
-    /* Navigation-section */
+    /* Navigation-icons-section */
 
     .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
         font-size: 1rem;
     }
     .c-food-menu {
-        padding-bottom: 2rem;
+        padding-bottom: 3.2rem;
     }
     .c-scroll-top__link {
         font-size: 1.5rem;
@@ -561,4 +769,1289 @@ li {
         font-size: 1.2rem;
         padding: 0.7rem;
     }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 2rem 0 2rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.75rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    .c-navigation-container {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    /* book table section */
+
+    .s-book-reservation {
+        width: 150px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 115px;
+    }
+    .c-reservation__title {
+        font-size: 1rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.5rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.5rem;
+        font-size: 0.5rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+
+/* width 481px - 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
+    }
+    .c-main-title {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+    .c-description {
+        min-width: 340px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 0 3rem;
+    }
+    .c-gallery {
+        max-width: 400px;
+        padding: 0 2rem;
+        justify-content: center;
+        margin: auto;
+    }
+    .c-gallery__img-block {
+        max-width: 130px;
+        margin: 1rem 1rem ;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--resize {
+        height: 180px;
+        padding: 0;
+    }
+    .c-gallery__img--resize-custom {
+        width: 170px;
+        height: 140px;
+        padding: 2rem 2rem 0 0;
+    }
+    .c-gallery__img--quote {
+        height: 200px ;
+    }
+    
+    /* follow us - section */
+
+    .s-follow-us {
+        padding: 3rem 0;
+    }
+    .c-title {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 1rem;
+        max-width: 280px;
+        flex-wrap: wrap;
+    }
+    .c-img-display__block {
+        width: 120px;
+        height: 120px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block--custom {
+        width: 245px;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-10px);
+        transition-duration: 1s;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-img-display__overlay {
+        padding: 0.3rem;
+    }
+    .c-img-display__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: 0;
+        padding-top: 0.3rem;
+    }
+    .c-btn-load__button {
+        font-size: 0.5rem;
+        padding: 0.25rem 1.125rem;
+    }
+
+    /* Footer section */
+    
+    .c-foot-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    .f-foot-contact {
+        padding-top: 2.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }  
+    .c-foot-title__link {
+        font-size: 0.9rem;
+    } 
+    .c-contact {
+        font-size: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .c-contact__email {
+        display: flex;
+        flex-direction: column;
+    }
+    .c-contact__input {
+        font-size: 0.8rem;
+    } 
+    .c-contact__button {
+        margin: 0.8rem auto 0 auto;
+        display: inline-block;
+        font-family: 'Fanwood Text', serif;
+        font-size: 0.7rem;
+        padding: 0.25rem 1.125rem;
+        background-color: #f1f1f1;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .f-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation-icons-section */
+
+    .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
+        font-size: 1rem;
+    }
+    .c-food-menu {
+        padding-bottom: 3.2rem;
+    }
+    .c-scroll-top__link {
+        font-size: 1.5rem;
+    }
+    .c-support {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 2rem 0 2rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.75rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    .c-navigation-container {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    /* book table section */
+
+    .s-book-reservation {
+        width: 200px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 115px;
+    }
+    .c-reservation__title {
+        font-size: 1rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.5rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.5rem;
+        font-size: 0.5rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+
+/* width 769px - 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
+    }
+    .c-main-title {
+        font-size: 1.25rem;
+        margin-bottom: 4rem;
+    }
+    .c-description {
+        max-width: 700px;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        padding: 0 3rem;
+    }
+    .c-gallery {
+        max-width: 800px;
+        padding: 0 2rem;
+        justify-content: center;
+        margin: auto;
+    }
+    .c-gallery__img-block {
+        max-width: 250px;
+        margin: 1rem 1rem ;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--resize {
+        width: 275px;
+        height: 300px;
+    }
+    .c-gallery__img--resize-custom {
+       padding-top: 3rem;
+       height: 250px;
+    }
+    .c-gallery__img--quote {
+        height: 300px;
+    }
+    
+    /* follow us - section */
+
+    .s-follow-us {
+        padding: 3.5rem 0;
+    }
+    .c-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.75rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 2rem;
+        max-width: 700px;
+        flex-wrap: wrap;
+    }
+    .c-img-display__block {
+        width: 245px;
+        height: 240px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block--custom {
+        width: 495px;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-10px);
+        transition-duration: 1s;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-img-display__overlay {
+        padding: 0.3rem;
+    }
+    .c-img-display__text {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-top: 0;
+        padding-top: 0.3rem;
+    }
+    .c-btn-load__button {
+        font-size: 0.75rem;
+        padding: 0.5rem 2.5rem;
+    }
+
+    /* Footer section */
+
+    .f-foot-contact {
+        padding-top: 2.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    } 
+    .c-foot-container {
+        display: flex;
+        margin-bottom: 5rem;
+        max-width: 700px;
+    }
+    .c-foot-title__link {
+        font-size: 0.9rem;
+    } 
+    .c-contact {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .c-contact__email {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .c-contact__input {
+        font-size: 0.75rem;
+        padding: 0.75rem 1.2rem;
+        width: 12rem;
+        height: 1.5rem;
+    } 
+    .c-contact__button {
+        margin: 0.8rem auto 0 auto;
+        display: inline-block;
+        font-family: 'Fanwood Text', serif;
+        font-size: 0.7rem;
+        padding: 0.25rem 1.125rem;
+        background-color: #f1f1f1;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .f-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation-icons-section */
+
+    .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
+        font-size: 1.2rem;
+    }
+    .c-food-menu {
+        padding-bottom: 3.2rem;
+    }
+    .c-scroll-top__link {
+        font-size: 1.5rem;
+    }
+    .c-support {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 2.5rem 0 2.5rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.9rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1.2rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.75rem 0 0.75rem;
+    }
+    .c-navigation-container {
+        padding: 0 1.75rem 0 1.75rem;
+    }
+    /* book table section */
+
+    .s-book-reservation {
+        width: 250px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 155px;
+    }
+    .c-reservation__title {
+        font-size: 1.2rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.75rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.75rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.75rem;
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+
+/* width 1025px - 1200px */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
+    }
+    .c-main-title {
+        font-size: 1.25rem;
+        margin-bottom: 4rem;
+    }
+    .c-description {
+        max-width: 700px;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        padding: 0 3rem;
+    }
+    .c-gallery {
+        max-width: 800px;
+        padding: 0 2rem;
+        justify-content: center;
+        margin: auto;
+    }
+    .c-gallery__img-block {
+        max-width: 250px;
+        margin: 1rem 1rem ;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--resize {
+        width: 275px;
+        height: 300px;
+    }
+    .c-gallery__img--resize-custom {
+       padding-top: 3rem;
+       height: 250px;
+    }
+    .c-gallery__img--quote {
+        height: 300px;
+    }
+    
+    /* follow us - section */
+
+    .s-follow-us {
+        padding: 3.5rem 0;
+    }
+    .c-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.75rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 2rem;
+        max-width: 990px;
+        flex-wrap: wrap;
+
+    }
+    .c-img-display__block {
+        width: 110px;
+        height: 110px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-10px);
+        transition-duration: 1s;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-img-display__overlay {
+        padding: 0.3rem;
+    }
+    .c-img-display__text {
+        font-size: 0.85rem;
+        line-height: 1rem;
+        margin-top: 0;
+        padding-top: 0.3rem;
+    }
+    .c-btn-load__button {
+        font-size: 0.75rem;
+        padding: 0.5rem 2.5rem;
+    }
+
+    /* Footer section */
+
+    .f-foot-contact {
+        padding-top: 2.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    } 
+    .c-foot-container {
+        display: flex;
+        margin-bottom: 5rem;
+        max-width: 800px;
+    }
+    .c-foot-title__link {
+        font-size: 0.9rem;
+    } 
+    .c-contact {
+        font-size: 0.8rem;
+        padding: 1rem 0.755rem;
+    }
+    .c-contact__email {
+        display: flex;
+        margin-top: 0;
+    }
+    .c-contact__input {
+        font-size: 0.75rem;
+        padding: 0.75rem 1.2rem;
+        width: 12rem;
+        height: 1.5rem;
+    } 
+    .c-contact__button {
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        padding: 5px;
+        margin-left: 1rem;
+        font-size: 0.75rem;
+        transition: all 800ms ease;
+    }
+    .f-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation-icons-section */
+
+    .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
+        font-size: 1.2rem;
+    }
+    .c-food-menu {
+        padding-bottom: 3.2rem;
+    }
+    .c-scroll-top__link {
+        font-size: 1.5rem;
+    }
+    .c-support {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 2.5rem 0 2.5rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.9rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1.2rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.75rem 0 0.75rem;
+    }
+    .c-navigation-container {
+        padding: 0 1.75rem 0 1.75rem;
+    }
+    /* book table section */
+
+    .s-book-reservation {
+        width: 250px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 155px;
+    }
+    .c-reservation__title {
+        font-size: 1.2rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.75rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.75rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.75rem;
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+
+/* width 1201px and 1440px */
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+
+    /* Intro-section */
+
+    .s-intro-section {
+        margin-bottom: 4rem;
+    }
+    .c-main-title {
+        font-size: 1.25rem;
+        margin-bottom: 4rem;
+    }
+    .c-description {
+        max-width: 700px;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        padding: 0 3rem;
+    }
+    .c-gallery {
+        max-width: 800px;
+        padding: 0 2rem;
+        justify-content: center;
+        margin: auto;
+    }
+    .c-gallery__img-block {
+        max-width: 250px;
+        margin: 1rem 1rem ;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--resize {
+        width: 275px;
+        height: 300px;
+    }
+    .c-gallery__img--resize-custom {
+       padding-top: 3rem;
+       height: 250px;
+    }
+    .c-gallery__img--quote {
+        height: 300px;
+    }
+    
+    /* follow us - section */
+
+    .s-follow-us {
+        padding: 3.5rem 0;
+    }
+    .c-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .c-subtitle {
+        font-size: 1.75rem;
+        margin-bottom: 3rem;
+    }
+    .c-img-display {
+        margin-bottom: 2rem;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+    .c-img-display__block {
+        width: 140px;
+        height: 140px;
+        margin: 2px 2px;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-10px);
+        transition-duration: 1s;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-img-display__overlay {
+        padding: 0.3rem;
+    }
+    .c-img-display__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: 0;
+        padding-top: 0.3rem;
+    }
+    .c-btn-load__button {
+        font-size: 0.75rem;
+        padding: 0.5rem 2.5rem;
+    }
+
+    /* Footer section */
+
+    .f-foot-contact {
+        padding-top: 2.5rem;
+        font-family: 'Cormorant Garamond', serif;
+        max-width: 1300px;
+    } 
+    .c-foot-container {
+        display: flex;
+        margin-bottom: 5rem;
+    }
+    .c-foot-title__link {
+        font-size: 1rem;
+    } 
+    .c-contact {
+        font-size: 0.9rem;
+        padding-top: 1rem;
+    }
+    .c-contact__email {
+        display: flex;
+    }
+    .c-contact__input {
+        font-size: 0.75rem;
+        padding: 0.75rem 1.2rem;
+        width: 12rem;
+        height: 1.5rem;
+    } 
+    .c-contact__button {
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        padding: 5px;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        transition: all 800ms ease;
+    }
+    .f-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation-icons-section */
+
+    .c-menu-bar, .c-book-table, .c-food-menu, .c-social-apps__link {
+        font-size: 1.2rem;
+    }
+    .c-food-menu {
+        padding-bottom: 3.2rem;
+    }
+    .c-scroll-top__link {
+        font-size: 1.5rem;
+    }
+    .c-support {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    /* navigation bar section */
+
+    .s-navigation-bar {
+        padding: 2.5rem 0 2.5rem 0;
+    }
+    .c-navigation-bar__item {
+        font-size: 0.9rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1.2rem;
+    }
+    .c-navigation-bar__link {
+        padding: 0 0.75rem 0 0.75rem;
+    }
+    .c-navigation-container {
+        padding: 0 1.75rem 0 1.75rem;
+    }
+    /* book table section */
+
+    .s-book-reservation {
+        width: 250px;
+        padding: 4rem 0;
+    }
+    .c-reservation-container {
+        max-width: 155px;
+    }
+    .c-reservation__title {
+        font-size: 1.2rem; 
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 1.75rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 0.75rem;
+    }
+    #c-reservation-form__submitBtn {
+        height: 1.75rem;
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+    .c-reservation-form__option {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    .c-reservation__cancel {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+
+/* width 1441px and 1800px */
+@media only screen and (min-width: 1441px) and (max-width: 1800px) {
+
+    * {
+        margin: auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    li {
+        list-style-type: none;
+    }
+    
+    /* Arun Revised styling */
+    
+    /* navigation */
+    
+    .s-navigation-bar {
+       background-color: #ffd252;
+       padding: 4rem 0 4rem 0;
+       width: 100%;
+       position: absolute;
+       top: -400px;
+       transition: all 2s ease;
+    }
+    .s-navigation-bar__open {
+        position: fixed;
+        z-index: 2;
+        transition: all 1s ease;
+        transform: translateY(400px);
+    }
+    .c-navigation-container {
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+        position: relative;
+    }
+    .c-navigation-bar__close, .c-reservation__close {
+        font-size: 2rem;
+        position: absolute;
+        cursor: pointer;
+    }
+    .c-navigation-bar__cancel, .c-reservation__cancel {
+        font-size: 2.5rem;
+        transition: all 700ms ease;
+    }
+    .c-navigation-bar__cancel:hover, .c-reservation__cancel:hover {
+        color: #f1f1f1;
+    }
+    .c-navigation-bar__item {
+        font-weight: 600;
+        font-size: 1rem;
+        display: inline-block;
+    }
+    .c-navigation-bar__link {
+        padding: 0 1rem 0 1rem;
+        transition: all 600ms ;
+    }
+    .c-navigation-bar__link:hover {
+        color: #f1f1f1;   
+    }
+    /* Navigation ends */
+    
+    /* Book Table starts */
+    
+    .s-book-reservation {
+        background-color: #ffd252;
+        height: 100vh;
+        width: 500px;
+        padding: 8rem 0;
+        font-family: 'Cormorant Garamond', serif;
+        position: absolute;
+        top: 0;
+        right: -500px;
+        transition: all 2s ease;
+        display: none;
+    }
+    .s-book-reservation__open {
+        display: block;
+        position: fixed;
+        z-index: 2;
+        transition: all 1s ease;
+        transform: translateX(-500px);
+    }
+    .c-reservation {
+        display: flex;
+        flex-direction: column;
+    }
+    .c-reservation__title {
+        margin-bottom: 3rem;
+        padding-top: 6rem;
+        font-size: 1.8rem;
+    }
+    #c-reservation__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .c-reservation-container {
+        max-width: 350px;
+        position: relative;
+    }
+    #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 1rem;
+        padding: 10px;
+        border: none;
+        background-color: #f1f1f1;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .c-reservation__close {
+        position: absolute;
+        top: 0;
+        right: -1rem;
+    }
+    #c-reservation-form__submitBtn {
+        font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: 10px;
+        border: none;
+        font-weight: 700;
+        background-color: black;
+        color: white;
+        appearance: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 700ms ease;
+    }
+    #c-reservation-form__submitBtn:hover {
+        transform: scale(1.05);
+    }
+    #c-reservation-form__date:hover, #c-reservation-form__time:hover, #c-reservation-form__size:hover {
+        cursor: pointer;
+        background-color: #e9e6e6f6;
+        border: none;
+    }
+    #c-reservation-form__date:focus, #c-reservation-form__time:focus, #c-reservation-form__size:focus {
+        outline: none;
+    }
+    .c-reservation-form__option {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+    }
+    
+    /* book table ends */
+    
+    /* Navigation fixed icons */
+    
+    .c-menu-bar {
+        position: fixed;
+        top: 4rem;
+        left: 2rem;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.644);
+        z-index: 1;
+    }
+    .c-menu-bar__icon, .c-book-table__link, .c-food-menu__link, .c-scroll-top__link {
+        transition: all 600ms ease;
+    }
+    .c-menu-bar__icon:hover, .c-book-table__link:hover, .c-food-menu__link:hover, .c-scroll-top__link:hover {
+        color: #ffd252; 
+    }
+    .c-food-menu {
+        transform: translateY(-50%) rotate(90deg) ;
+        font-family: 'Cormorant Garamond', serif;
+        position: fixed;
+        left: -2rem;
+        padding-bottom: 1rem;
+        top: 50%;
+        z-index: 1;
+    }
+    .c-scroll-top {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        font-size: 2.25rem;
+        z-index: 1;
+    }
+    .c-book-table {
+        position: fixed;
+        top: 4rem;
+        right: 2rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.4rem;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .c-social-apps {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2rem;
+        z-index: 1;
+    }
+    .c-social-apps__link {
+        font-size: 1.2rem;
+        padding: 0.2rem;
+    }
+    .c-support {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        border: 0px solid rgb(39, 7, 218);
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: rgb(46, 42, 42);
+        cursor: pointer;
+        z-index: 1;
+    }
+    .c-support__link {
+        color: #f1f1f1;
+    }
+    .c-support:hover {
+        opacity: 90%;
+    }
+    
+    
+    /* Section - intro-section */
+    
+    .s-intro-section {
+        margin-bottom: 8rem;
+    }
+    .c-container {
+        text-align: center;
+        margin: auto;
+    }
+    .c-main-title {
+        margin: 4rem auto 8rem auto;
+        font-size: 1.5rem;
+    }
+    .c-main-title__link {
+        transition: all 700ms ease;
+    }
+    .c-main-title__link:hover {
+        color: #ffd252;
+    }
+    .c-description {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.5rem;
+        max-width: 1000px;
+        text-align: center;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+    .c-description__link {
+        font-weight: 500;
+        font-style: italic;
+        color: #ffd252;
+    }
+    .c-gallery {
+        max-width: 1150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .c-gallery__img-block {
+        margin: 2rem;
+    }
+    .c-gallery__img {
+        width: 100%;
+    }
+    .c-gallery__img--quote { 
+        width: 450px;
+        height: 500px;
+        object-fit: cover;
+    
+    }
+    .c-gallery__img--resize {
+        width: 450px;
+        height: 600px;
+        object-fit: contain;
+    }
+    .c-gallery__img--resize-custom {
+        height: 450px;
+        width: 500px;
+        object-fit: cover;
+        padding-top: 125px;
+    }
+    
+    /* Section-Follow us */
+    
+    .s-follow-us {
+        background-color: #f1f1f1;
+        padding: 6rem 0;
+    }
+    .c-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .c-subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 500;
+        font-size: 2.6rem;
+        margin-bottom: 6rem;
+    }
+    .c-img-display {
+        display: flex;
+        max-width: 1360px;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    .c-img-display__block {
+        width: 180px;
+        height: 180px;
+        margin: 0 4px 0 4px;
+        position: relative;
+        transition: 1000ms transform;
+        transform: translateY(0);
+    }
+    .c-img-display__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    .c-img-display__overlay {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.575);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 1rem;
+    }
+    .c-img-display__text {
+        font-size: 1.3rem;
+        color: #f1f1f1d7;
+        margin-top: 1rem;
+        line-height: 1.75rem;
+    }
+    .c-img-display__block:hover .c-img-display__overlay {
+        display: inline;
+    }
+    .c-img-display__block:hover {
+        transform: translateY(-30px);
+        transition-duration: 1s;
+        box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.26);
+    }
+    .c-btn-load__button {
+        display: inline-block;
+        font-size: 1rem;
+        font-family: 'Fanwood Text', serif;
+        padding: 0.5rem 2.25rem;
+        background-color: white;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .c-btn-load__button:hover {
+        color: #f1f1f1;
+        background-color: black;
+        transition-duration: 800ms;
+    }
+    
+    /* Footer section */
+    
+    .f-foot-contact {
+        padding-top: 5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-foot-container {
+        display: flex;
+        max-width: 1400px;
+        margin-bottom: 10rem;
+    }
+    .c-foot-title {
+        font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    }
+    .c-foot-title__link {
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 800ms ease;
+    }
+    .c-foot-title__link:hover {
+        color: #ffd252;
+    }
+    .c-contact {
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+    }
+    .c-contact__email {
+        margin-top: 0.5rem;
+    }
+    .c-contact__input {
+        font-size: 1rem;
+        padding: 0.75rem 1.2rem;
+        width: 16rem;
+        height: 2.5rem;
+    }
+    .c-contact__input:hover {
+        border: 2px solid black;
+        transform: scale(0.95);
+    }
+    .c-contact__button {
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        padding: 5px;
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        transition: all 800ms ease;
+    }
+    .c-contact__button:hover {
+        color: #ffd252;
+    }
+    .f-copyright {
+        font-size: 1.2rem;
+        color: #979494;
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+      
 }
