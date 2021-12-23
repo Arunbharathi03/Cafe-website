@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    overflow-y: scroll;
+    user-select: none;
 }
 a {
     text-decoration: none;
@@ -376,6 +381,7 @@ li {
 }
 .c-foot-title {
     font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    cursor: pointer;
 }
 .c-foot-title__link {
     font-size: 1.2rem;
@@ -422,6 +428,469 @@ li {
     margin-bottom: 1.25rem;
 }
 
+/* responsiveness - mobile first */
+
+@media only screen and (min-width: 320px) {
+    .s-menu-header {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-container {
+        max-width: 250px;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .c-menu-header {
+        margin-bottom: 2rem;
+    }
+    .c-menu-header__title {
+        font-size: 0.8rem;
+    }
+    .c-menu-header__description {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    .c-menu-split__title {
+        font-size: 1.2rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: #ffd252;
+        margin-bottom: 0.25rem;
+    }
+    .c-menu-split__title ::after {
+        margin: 1.5rem auto 3rem auto;
+        display: block;
+        content: '';
+        background-color: black;
+        height: 1px;
+        width: 1.5rem;
+    }
+    .c-menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-items__dish {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    .c-menu-items__dish--end {
+        margin-bottom: 0;
+    }
+    .c-menu-items__dish--simple {
+        margin-bottom: 0.75rem;
+    }
+    .c-menu-items__title {
+        font-size: 0.8rem;
+    }
+    .c-menu-items__description {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+        font-style: italic;
+    }
+    .c-menu-items__price {
+        font-size: 1rem;
+    }
+    .c-menu-items--column {
+        display: flex;
+        flex-direction: column;
+        max-width: 230px;
+        margin-bottom: 2rem;
+    }
+    .c-menu-items__simple {
+        display: flex;
+        width: 120px;
+    }
+    .c-menu-items__dotted {
+        border-bottom: 0.125rem dotted black;
+        flex: 1;
+    }
+    .c-menu-items__simple .c-menu-items__title {
+        padding-right: 0.5rem;
+        font-size: 0.75rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .c-menu-items__simple .c-menu-items__price {
+        padding-left: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .c-ourstory-container {
+        max-width: 200px;
+        margin-bottom: 5rem;
+    }
+    .c-ourstory {
+        font-family: 'Cormorant Garamond', serif;
+        text-align: center;
+    }
+    .c-ourstory__maintitle {
+        margin-bottom: 3rem;
+    }
+    .c-ourstory__img-block {
+        width: 200px;
+        height: 150px;
+        margin-bottom: 3rem;
+    }
+    .c-ourstory__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .c-ourstory__title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        width: 180px;
+    }
+    .c-ourstory__description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .s-menu-header {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-container {
+        max-width: 300px;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .c-menu-header {
+        margin-bottom: 2rem;
+    }
+    .c-menu-header__title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .c-menu-header__description {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    .c-menu-split__title {
+        font-size: 1.4rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: #ffd252;
+        margin-bottom: 0.25rem;
+    }
+    .c-menu-split__title ::after {
+        margin: 1.5rem auto 3rem auto;
+        display: block;
+        content: '';
+        background-color: black;
+        height: 1px;
+        width: 1.5rem;
+    }
+    .c-menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-items__dish {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    .c-menu-items__dish--end {
+        margin-bottom: 0;
+    }
+    .c-menu-items__dish--simple {
+        margin-bottom: 0.75rem;
+    }
+    .c-menu-items__title {
+        font-size: 1.2rem;
+    }
+    .c-menu-items__description {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        font-style: italic;
+    }
+    .c-menu-items__price {
+        font-size: 1.2rem;
+    }
+    .c-menu-items--column {
+        display: flex;
+        flex-direction: column;
+        max-width: 230px;
+        margin-bottom: 2rem;
+    }
+    .c-menu-items__simple {
+        display: flex;
+        width: 140px;
+    }
+    .c-menu-items__dotted {
+        border-bottom: 0.125rem dotted black;
+        flex: 1;
+    }
+    .c-menu-items__simple .c-menu-items__title {
+        padding-right: 0.5rem;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .c-menu-items__simple .c-menu-items__price {
+        padding-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .c-ourstory-container {
+        max-width: 300px;
+        margin-bottom: 5rem;
+    }
+    .c-ourstory {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-ourstory__maintitle {
+        margin-bottom: 3rem;
+    }
+    .c-ourstory__img-block {
+        width: 300px;
+        height: 150px;
+        margin-bottom: 3rem;
+    }
+    .c-ourstory__title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        width: 250px;
+    }
+    .c-ourstory__description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+    .s-menu-header {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-container {
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .c-menu-header {
+        margin-bottom: 2rem;
+    }
+    .c-menu-header__title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+    .c-menu-header__description {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    .c-menu-split__title {
+        font-size: 1.4rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: #ffd252;
+        margin-bottom: 0.25rem;
+    }
+    .c-menu-split__title ::after {
+        margin: 1.5rem auto 3rem auto;
+        display: block;
+        content: '';
+        background-color: black;
+        height: 1px;
+        width: 1.5rem;
+    }
+    .c-menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-items__dish {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    .c-menu-items__dish--end {
+        margin-bottom: 0;
+    }
+    .c-menu-items__dish--simple {
+        margin-bottom: 0.75rem;
+    }
+    .c-menu-items__title {
+        font-size: 1.2rem;
+    }
+    .c-menu-items__description {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        font-style: italic;
+    }
+    .c-menu-items__price {
+        font-size: 1.2rem;
+    }
+    .c-menu-items--column {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .c-menu-items__simple {
+        display: flex;
+        width: 200px;
+    }
+    .c-menu-items__dotted {
+        border-bottom: 0.125rem dotted black;
+        flex: 1;
+    }
+    .c-menu-items__simple .c-menu-items__title {
+        padding-right: 0.5rem;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .c-menu-items__simple .c-menu-items__price {
+        padding-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .c-ourstory-container {
+        max-width: 500px;
+        margin-bottom: 5rem;
+    }
+    .c-ourstory {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-ourstory__img-block {
+        width: 450px;
+        height: 300px;
+    }
+    .c-ourstory__title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        width: 400px;
+    }
+    .c-ourstory__description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+    .s-menu-header {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-container {
+        max-width: 800px;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    .c-menu-header {
+        margin-bottom: 2rem;
+    }
+    .c-menu-header__title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .c-menu-header__description {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .c-menu-split__title {
+        font-size: 1.6rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: #ffd252;
+        margin-bottom: 0.25rem;
+    }
+    .c-menu-split__title ::after {
+        margin: 1.5rem auto 3rem auto;
+        display: block;
+        content: '';
+        background-color: black;
+        height: 1px;
+        width: 1.5rem;
+    }
+    .c-menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3.5rem;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-menu-items__dish {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+    }
+    .c-menu-items__dish--end {
+        margin-bottom: 0;
+    }
+    .c-menu-items__dish--nopad {
+        
+    }
+    .c-menu-items__dish--simple {
+        margin-bottom: 0.75rem;
+    }
+    .c-menu-items__title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .c-menu-items__description {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+    .c-menu-items__price {
+        font-size: 1.4rem;
+    }
+    .c-menu-items--column {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .c-menu-items__simple {
+        display: flex;
+        width: 250px;
+    }
+    .c-menu-items__dotted {
+        border-bottom: 0.125rem dotted black;
+        flex: 1;
+    }
+    .c-menu-items__simple .c-menu-items__title {
+        padding-right: 0.5rem;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .c-menu-items__simple .c-menu-items__price {
+        padding-left: 0.5rem;
+        font-size: 1.1rem;
+    }
+    .c-ourstory-container {
+        max-width: 600px;
+        margin-bottom: 5rem;
+    }
+    .c-ourstory {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .c-ourstory__maintitle {
+        font: 6rem;
+    }
+    .c-ourstory__img-block {
+        width: 600px;
+        height: 400px;
+        margin-bottom: 4rem;
+    }
+    .c-ourstory__title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        width: 560px;
+        line-height: 4rem;
+    }
+    .c-ourstory__description {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+}
 /* Responsiveness */
 
 /* width 320px - 359px */
@@ -593,7 +1062,7 @@ li {
     /* book table section */
 
     .s-book-reservation {
-        width: 150px;
+        width: 100%;
         padding: 4rem 0;
     }
     .c-reservation-container {
@@ -627,6 +1096,7 @@ li {
         right: 1rem;
     }
 }
+
 /* width 360px - 480px */
 @media only screen and (min-width: 360px) and (max-width: 480px) {
 
@@ -790,11 +1260,11 @@ li {
     /* book table section */
 
     .s-book-reservation {
-        width: 150px;
+        width: 100%;
         padding: 4rem 0;
     }
     .c-reservation-container {
-        max-width: 115px;
+        max-width: 300px;
     }
     .c-reservation__title {
         font-size: 1rem; 
@@ -991,31 +1461,31 @@ li {
     /* book table section */
 
     .s-book-reservation {
-        width: 200px;
+        width: 100%;
         padding: 4rem 0;
     }
     .c-reservation-container {
-        max-width: 115px;
+        max-width: 400px;
     }
     .c-reservation__title {
-        font-size: 1rem; 
+        font-size: 1.5rem; 
     }
     #c-reservation-form__date, #c-reservation-form__time, #c-reservation-form__size {
         width: 100%;
-        height: 1.5rem;
+        height: 2.5rem;
         margin-bottom: 1rem;
         padding: 5px;
         border: none;
         background-color: #f1f1f1;
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
     #c-reservation-form__submitBtn {
-        height: 1.5rem;
-        font-size: 0.5rem;
+        height: 2.5rem;
+        font-size: 0.75rem;
         padding: 5px;
     }
     .c-reservation-form__option {
-        font-size: 0.75rem;
+        font-size: 1rem;
         padding: 0.5rem;
     }
     .c-reservation__cancel {

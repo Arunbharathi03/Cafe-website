@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Online food ordering">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>White & Yellow | Cafe</title>
+        <title>White & Yellow | Our Story</title>
         <link rel="stylesheet" type="text/css" href="/styles/styles.css">
         <script src="https://kit.fontawesome.com/502f03ac2a.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,19 +24,19 @@
             <div class="c-navigation-bar">
                 <div class="c-navigation-container">
                     <div class="c-navigation-bar__close">
-                        <a class="c-navigation-bar__cancel">
-                            <span class="fas fa-times"  title="Back to site"></span>
+                        <a class="c-navigation-bar__cancel" title="Back to site">
+                            <span class="fas fa-times"></span>
                         </a>
                     </div> 
                     <ul class="c-navigation-bar__list">
                         <li class="c-navigation-bar__item">
-                            <a class="c-navigation-bar__link" href="#">Home</a>
+                            <a class="c-navigation-bar__link" href="/src/index.html">Home</a>
                         </li>
                         <li class="c-navigation-bar__item">
                             <a class="c-navigation-bar__link" href="#">Our Story</a>
                         </li>
                         <li class="c-navigation-bar__item">
-                            <a class="c-navigation-bar__link" href="#">Menu</a>
+                            <a class="c-navigation-bar__link" href="/src/menu.html">Menu</a>
                         </li>
                         <li class="c-navigation-bar__item">
                             <a class="c-navigation-bar__link" href="#">Contact</a>
@@ -50,8 +50,8 @@
             <div class="c-reservation-container">
                 <div class="c-reservation">
                     <div class="c-reservation__close">
-                        <a class="c-reservation__cancel">
-                            <span class="fas fa-times" title="Back to site"></span>
+                        <a class="c-reservation__cancel" title="Back to site">
+                            <span class="fas fa-times"></span>
                         </a>
                     </div>
                     <div class="c-reservation__title">Reservations</div>
@@ -92,16 +92,6 @@
             </div>
         </section>
         
-        <section class="s-intro-section">
-            <div class="c-container">
-                <h1 class="c-main-title">
-                    <a class="c-main-title__link" href="/src/index.html">
-                        White & Yellow
-                    </a>
-                </h1> 
-            </div>
-        </section>
-
         <div id="nav-menu" class="c-menu-bar">
             <a class="c-menu-bar__icon">
                <span class="fas fa-bars fa-lg"></span> 
@@ -109,13 +99,13 @@
         </div>
 
         <div class="c-food-menu">
-            <a class="c-food-menu__link" href="/public/food-menu/index.html">
+            <a class="c-food-menu__link" href="../src/menu.html">
                 See Our Menu
             </a>
         </div>
 
         <div class="c-scroll-top">
-            <a class="c-scroll-top__link" href="/src/index.html">
+            <a class="c-scroll-top__link" href="index.html">
                 <span class="fas fa-pizza-slice"></span>
             </a>
         </div>
@@ -148,10 +138,35 @@
             </a>
         </div>
 
+        <section class="s-intro-section">
+            <div class="c-container">
+                <h1 class="c-main-title">
+                    <a class="c-main-title__link" href="/src/index.html">
+                        White & Yellow
+                    </a>
+                </h1> 
+            </div>
+        </section>
+
+        <section class="s-ourstory">
+            <div class="c-ourstory-container">
+                <div class="c-ourstory">
+                    <h5 class="c-ourstory__maintitle">Our Story</h5>
+                    <div class="c-ourstory__img-block">
+                        <img class="c-ourstory__img" src="/src/images/ourstory.jpeg">
+                    </div>
+                    <h1 class="c-ourstory__title">Day or night, sunny or grey, enjoy our <span style="font-style: italic;">all-day breakfast</span> service.</h1>
+                    <p class="c-ourstory__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus error! Similique fugiat vel ad iste enim quia alias perspiciatis laboriosam quas perferendis voluptates accusantium, exercitationem quam numquam eligendi tempore.</p>
+                    <p class="c-ourstory__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus error! Similique fugiat vel ad iste enim quia alias perspiciatis laboriosam quas perferendis voluptates accusantium, exercitationem quam numquam eligendi tempore.</p>
+                    
+                </div>
+            </div>
+        </section>
+
         <footer class="f-foot-contact">
             <div class="c-foot-container">
                 <div class="c-foot-title">
-                    <a class="c-foot-title__link" href="#">White & Yellow</a>
+                    <a class="c-foot-title__link" onclick="window.scrollTo(0, 0)">White & Yellow</a>
                 </div>
                 <ul class="c-contact">
                     <li>500 Terry Francois Street</li>
@@ -177,5 +192,4 @@
         </footer>
         <script src="/js/app.js"></script>
     </body>
-
 </html>
