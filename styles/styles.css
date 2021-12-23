@@ -7,7 +7,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    font: 16px, sans-serif;
     overflow-y: scroll;
     user-select: none;
 }
@@ -2524,4 +2524,82 @@ li {
         margin-bottom: 1.25rem;
     }
       
+}
+
+/* Navbar Mobile first */
+
+.s-navi-bar {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffd252;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.c-navi-list {
+    display: flex;
+    flex-direction: column;
+}
+.c-navi-list__item {
+    font-weight: 700;
+    padding: 1rem;
+}
+.c-navi-list__link:focus, .c-navi-list__link:hover {
+    color: #fff;
+}
+.c-navi-bar-close {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.c-navi-bar-close__icon-el {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* min-width 640px */
+
+@media (min-width: 768px) {
+
+    .c-navi-list__item {
+        padding: 2rem;
+    }
+    .c-navi-list__link {
+        font-size: 1.5rem;
+    }
+    .c-navi-bar-close__icon {
+        font-size: 2rem;
+    }
+    .c-navi-bar-close__icon-el {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .s-navi-bar {
+        height: auto;
+        padding: 1.5rem 0;
+    }
+    .c-navi-list {
+        flex-direction: row;
+    }
+    .c-navi-list__item {
+        padding: 2rem;
+    }
+    .c-navi-list__link {
+        font-size: 1rem;
+    }
+    .c-navi-bar-close {
+        top: 3rem;
+    }
+    .c-navi-bar-close__icon-el {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 }
