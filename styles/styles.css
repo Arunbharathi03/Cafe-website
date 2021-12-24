@@ -661,6 +661,7 @@ li {
 }
 
 @media only screen and (min-width: 769px) {
+
     .s-menu-header {
         font-family: 'Cormorant Garamond', serif;
     }
@@ -755,9 +756,13 @@ li {
     .c-ourstory {
         font-family: 'Cormorant Garamond', serif;
     }
+    .c-ourstory__maintitle {
+        font-size: 1.4rem;
+        margin-bottom: 5rem;
+    }
     .c-ourstory__img-block {
         width: 450px;
-        height: 300px;
+        height: 270px;
     }
     .c-ourstory__title {
         font-size: 1.25rem;
@@ -1049,6 +1054,9 @@ li {
     .c-navigation-bar__item {
         font-size: 0.5rem;
     }
+    .c-navigation-bar__close {
+        top: -0.85rem;
+    }
     .c-navigation-bar__cancel {
         font-size: 0.75rem;
     }
@@ -1247,6 +1255,9 @@ li {
     }
     .c-navigation-bar__item {
         font-size: 0.75rem;
+    }
+    .c-navigation-bar__close {
+        top: -1rem;
     }
     .c-navigation-bar__cancel {
         font-size: 1rem;
@@ -2097,7 +2108,7 @@ li {
 }
 
 /* width 1441px and 1800px */
-@media only screen and (min-width: 1441px) and (max-width: 1800px) {
+@media only screen and (min-width: 1441px) {
 
     * {
         margin: auto;
@@ -2528,7 +2539,7 @@ li {
 
 /* Navbar Mobile first */
 
-.s-navi-bar {
+/* .s-navi-bar {
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -2562,7 +2573,7 @@ li {
 
 /* min-width 640px */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
     .c-navi-list__item {
         padding: 2rem;
@@ -2602,4 +2613,4 @@ li {
         height: 1.5rem;
     }
 
-}
+} */
