@@ -228,6 +228,21 @@ li {
 .c-support:hover {
     opacity: 90%;
 }
+.c-go-up {
+    position: fixed;
+    top: 75%;
+    right: 2rem;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+}
+.c-go-up__visible {
+    display: block;
+}
+.c-go-up__item-el {
+    width: 2rem;
+    height: 2rem;
+}
 
 
 /* Section - intro-section */
@@ -2108,7 +2123,7 @@ li {
 }
 
 /* width 1441px and 1800px */
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1441px){
 
     * {
         margin: auto;

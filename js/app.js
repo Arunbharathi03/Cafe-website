@@ -43,3 +43,27 @@ window.addEventListener('click', function(){
     reservationBar.classList.remove('s-book-reservation__open')
     navMenuTrigger = true
 })
+
+//go up
+let goUpTrigger = document.querySelector('.c-go-up') 
+window.onscroll = function() {
+    if((window.pageYOffset) >= 1801 ){
+        goUpTrigger.classList.add('c-go-up__visible')
+    } else if ((window.pageYOffset) <= 1500 ) {
+        goUpTrigger.classList.remove('c-go-up__visible')
+    }
+}
+
+goUpTrigger.addEventListener('click', function(){
+    window.scrollTo(0, 0)
+})
+
+
+//Focus on subscriber email input on keydown
+const getSubscriberEmail = document.querySelector('.c-contact__input')
+
+document.addEventListener('keyup', (e) => {
+    if( e.keyCode === 220) {
+    getSubscriberEmail.focus()
+}
+})
