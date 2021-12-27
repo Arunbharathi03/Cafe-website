@@ -1264,25 +1264,41 @@ li {
     }
 
     /* navigation bar section */
-
     .s-navigation-bar {
-        padding: 2rem 0 2rem 0;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
     }
-    .c-navigation-bar__item {
-        font-size: 0.75rem;
-    }
-    .c-navigation-bar__close {
-        top: -1rem;
-    }
-    .c-navigation-bar__cancel {
-        font-size: 1rem;
-    }
-    .c-navigation-bar__link {
-        padding: 0 0.5rem 0 0.5rem;
+    .s-navigation-bar__open {
+        transform: translateY(0);
+        
     }
     .c-navigation-container {
-        padding: 0 1.5rem 0 1.5rem;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
     }
+    .c-navigation-bar {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .c-navigation-bar__item {
+        font-size: 1.25rem;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .c-navigation-bar__close {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+    .c-navigation-bar__cancel {
+        font-size: 1.5rem;
+    }
+    
     /* book table section */
 
     .s-book-reservation {

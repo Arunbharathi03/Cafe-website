@@ -49,7 +49,7 @@ let goUpTrigger = document.querySelector('.c-go-up')
 window.onscroll = function() {
     if((window.pageYOffset) >= 1801 ){
         goUpTrigger.classList.add('c-go-up__visible')
-    } else if ((window.pageYOffset) <= 1500 ) {
+    } else if ((window.pageYOffset) < 1500 ) {
         goUpTrigger.classList.remove('c-go-up__visible')
     }
 }
