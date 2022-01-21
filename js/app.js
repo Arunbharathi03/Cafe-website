@@ -26,7 +26,7 @@ reservationBar.addEventListener('click', function(e) {
 
 navMenuTrigger.addEventListener('click', (e) => {
     e.stopPropagation()
-    if( navMenuTrigger)navBar.classList.add('s-navigation-bar__open')
+    if (navMenuTrigger) navBar.classList.add('s-navigation-bar__open')
 })
 
 navBar_close.addEventListener('click', () => {
